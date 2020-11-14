@@ -1,0 +1,64 @@
+﻿@**Tipando a view com a classe Produto. Gera a taghelper asp-for. Atualiza direto o atributo do obj Produto*@
+@model Produto
+
+
+@* #1 *@
+<form asp-action="Cadastrar" asp-controller="Produto" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Cadastrar Produto</legend>
+
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-group">
+            <label asp-for="Nome">Nome: </label>
+            <input class="form-control" asp-for="Nome" type="text" placeholder="nome" />
+            <span class="text-danger" asp-validation-for="Nome"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Descricao">Descrição: </label>
+            <input class="form-control" asp-for="Descricao" type="text" placeholder="descrição" />
+            <span class="text-danger" asp-validation-for="Descricao"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Preco">Preço: </label>
+            <input class="form-control" asp-for="Preco" type="text" placeholder="preço" />
+            <span class="text-danger" asp-validation-for="Preco"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Quantidade">Quantidade: </label>
+            <input class="form-control" asp-for="Quantidade" type="text" placeholder="quantidade" />
+            <span class="text-danger" asp-validation-for="Quantidade"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Imagem">Imagem: </label>
+            <input type="file" class="form-control-file" name="file" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CategoriaId">Categoria: </label>
+            <select class="form-control" asp-items="@ViewBag.Categorias" asp-for="CategoriaId">
+                <option> -- Selecione -- </option>
+
+            </select>
+        </div>
+
+        <input class="btn btn-dark" type="submit" value="Cadastrar" />
+
+    </fieldset>
+</form>
+
+
+
+
+
+@*
+    #1
+    O Link <a> só direciona. O Form leva os dados dos inputs para a IAction
+    asp-action="Cadastrar" asp-controller="Produto" -> quando clicar no input type="submit" vai para a action Cadastrar no controller Produto
+    method e enctype é obrigatorio
+*@

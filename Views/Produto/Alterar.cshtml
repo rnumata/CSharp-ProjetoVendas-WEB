@@ -1,0 +1,37 @@
+﻿@**Tipando a view com a classe Produto. Gera a taghelper asp-for. Atualiza direto o atributo do obj Produto*@
+@model Produto
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alterar Produto</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <form asp-action="Alterar" asp-controller="Produto" method="post">
+        <fieldset>
+            <legend>Alterar Produto</legend>
+
+            <label asp-for="Id">Id</label>
+            <input asp-for="Id" type="text" readonly />
+
+            <label asp-for="Nome">Nome: </label>
+            <input asp-for="Nome" type="text" placeholder="nome" />
+
+            <label asp-for="Descricao">Descrição: </label>
+            <input asp-for="Descricao" type="text" placeholder="descrição" />
+
+            <label asp-for="Preco">Preço: </label>
+            <input asp-for="Preco" type="text" placeholder="preço" />
+
+            <label asp-for="Quantidade">Quantidade: </label>
+            <input asp-for="Quantidade" type="text" placeholder="quantidade" />
+
+            <input type="submit" value="Salvar" />
+        </fieldset>
+    </form>
+</body>
+</html>

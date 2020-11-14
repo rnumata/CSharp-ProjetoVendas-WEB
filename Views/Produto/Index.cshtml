@@ -1,0 +1,58 @@
+﻿
+@*#*@
+@model List<Produto>
+
+
+        <h3 class="espacamento-baixo">Gerenciamento de Produtos</h3>
+
+        @*#1*@
+        <a asp-action="Cadastrar" asp-controller="Produto" class="btn btn-secondary espacamento-baixo">Cadastrar Produto</a>
+
+        <table class="table table-hover table-striped espacamento-baixo">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                    <th>Imagem</th>
+                    <th>Criadoem</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Produto produtoCadastrado in Model) //O Model é que recebe a List declarada no @model
+                {
+                <tr>
+                    <td>@produtoCadastrado.Id</td>
+                    <td>@produtoCadastrado.Nome</td>
+                    <td>@produtoCadastrado.Descricao</td>
+                    <td>@produtoCadastrado.Quantidade</td>
+                    <td>@produtoCadastrado.Preco.ToString("C2")</td>
+                    <td>@produtoCadastrado.Categoria.Nome</td>
+                    <td>
+                        <img src="~/images/@produtoCadastrado.Imagem" alt="@produtoCadastrado.Descricao" style="width:100px;height:80px" />
+                    </td>
+                    <td>@produtoCadastrado.Criadoem.ToString("dd/MM/yyyy")</td>
+                    <td> <a asp-action="Remover" asp-controller="Produto" asp-route-id="@produtoCadastrado.Id" class="btn btn-danger">Remover</a></td>
+                    <td> <a asp-action="Alterar" asp-controller="Produto" asp-route-id="@produtoCadastrado.Id" class="btn btn-warning">Alterar</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+        <p>Quantidade de produtos: @Model.Count</p>
+        <p>Dados atualizados em: @DateTime.Now</p>
+      
+   
+
+
+@*#1
+    Todo componente html que tem uma acao tem um tag helper. pex
+    asp-action="Cadastrar" asp-controller="Produto" -> quando clicar no link vai para a action Cadastrar no controller Produto
+    O Navegador converte em Href do html
+*@
+    
