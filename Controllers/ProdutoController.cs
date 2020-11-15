@@ -46,7 +46,7 @@ namespace VendasWEB.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Produto produto, IFormFile file)
         {
-            //ModelState.IsValid verifica se todas as anotacoes da model estao ok
+            // #5.1
             if (ModelState.IsValid)
             {
                 if(file != null)
@@ -123,6 +123,10 @@ namespace VendasWEB.Controllers
 /* #5
     Action que recebe os inputs do form. So pode acessar se a req for Post -> [HttpPost]
     O return eh o direcionamento para o index
+ */
+
+/* #5.1
+    ModelState.IsValid verifica se todas as anotacoes da model estao ok
  */
 
 /* #6

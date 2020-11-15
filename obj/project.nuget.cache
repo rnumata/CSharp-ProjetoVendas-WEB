@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LTnJr8jOGxCnEML7tv2UnqwGncwrYz1RdBRMv35OzH5h3edF92cwJrc3MHMFEKeQ0cjisPcs3sH2NzSBvpDEmA==",
+  "dgSpecHash": "6RJmXYQUw1rXEzHWJ0v4uX1qQzp9eR/puGWC3nLNqlsIAvry8XLgPxkT7z87ZcrmAAB27DfmUvS8FSpWdDx09w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWPF\\VendasWEB\\VendasWEB\\VendasWEB.csproj",
+  "projectFilePath": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWEB\\VendasWEB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

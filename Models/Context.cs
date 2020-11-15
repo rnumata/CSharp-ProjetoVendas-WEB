@@ -8,15 +8,31 @@ namespace VendasWEB.Models
 {
     public class Context : DbContext
     {
-        //options eh a string de conexao e o BD de dados a utilizar
+        // #1
         public Context(DbContextOptions options) : base(options)
         {
              
         }
 
+        // #2
         public DbSet<Produto> Produtos { get; set; }
 
         public DbSet<Categoria> Categorias { get; set; }
 
     }
 }
+
+
+
+
+
+
+/* #1
+    DbContextOptions => é a string de conexao e o BD de dados a utilizar
+    É configurada no Startup.cs
+ */
+
+
+/* #2
+     
+*/

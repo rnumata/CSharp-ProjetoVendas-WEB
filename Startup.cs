@@ -25,12 +25,11 @@ namespace VendasWEB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // !!! vai criar um objs DAOs para cada cliente que acessa a app
+            // #1
             services.AddScoped<ProdutoDAO>();
-
             services.AddScoped<CategoriaDAO>();
 
-            // !!! Configuracao do Context. UseSqlServer eh para o MSSqlServer !!!
+            // #2
             services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
 
             services.AddControllersWithViews();
@@ -62,3 +61,16 @@ namespace VendasWEB
         }
     }
 }
+
+
+
+/* #1
+    vai criar um objs DAOs para cada cliente que acessa a app
+ */
+
+/* #2
+    Configuracao do Context
+    <Context> é o nome da classe criada
+    .UseSqlServer é para o MSSqlServer
+    "Connection" é a string de conexão definida como Json lá no appsettings.json
+ */
