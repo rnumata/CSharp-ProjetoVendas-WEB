@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWEB\\VendasWEB.csproj": {}
+    "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWeb\\VendasWEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWEB\\VendasWEB.csproj": {
+    "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWeb\\VendasWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWEB\\VendasWEB.csproj",
+        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWeb\\VendasWEB.csproj",
         "projectName": "VendasWEB",
-        "projectPath": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWEB\\VendasWEB.csproj",
+        "projectPath": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWeb\\VendasWEB.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWEB\\obj\\",
+        "outputPath": "C:\\Users\\Administrador\\Desktop\\VS\\CSharp-ProjetoVendasWeb\\VendasWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
