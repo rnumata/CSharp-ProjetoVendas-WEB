@@ -8,9 +8,9 @@
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-
+    @*#1*@
     <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="@Url.Action("Index","Categoria")">E-Commerce</a>
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home" asp-route-id="0">E-Commerce</a>
     </nav>
 
     <div class="conteudo">
@@ -33,3 +33,13 @@
 
 </body>
 </html>
+
+
+
+
+
+
+@*
+    #1
+    asp-route-id="0" é o parametro para diferenciar no controller Home que 0 está chamando a view sem clicar em nenhuma categoria
+*@

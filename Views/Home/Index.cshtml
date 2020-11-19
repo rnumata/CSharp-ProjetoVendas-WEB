@@ -1,0 +1,41 @@
+﻿@model List<Produto>
+
+@{
+    List<Categoria> categorias = ViewBag.Categorias;
+}
+
+
+<div id="categorias" class="div-categoria">
+    @foreach (Categoria categoriaCadastrada in categorias)
+    {
+        @*#1*@
+        <a class="link-categoria" asp-action="Index" asp-controller="Home" asp-route-id ="@categoriaCadastrada.Id">
+            @categoriaCadastrada.Nome
+        </a>
+    }
+</div>
+
+
+<div id="produtos" class="row">
+
+    @foreach (Produto produtoCadastrado in Model)
+    {
+        
+        <div class="col-sm-3 div-conteudo">
+            <img src="~/images/@produtoCadastrado.Imagem" alt="@produtoCadastrado.Descricao" style="width:100px;height:80px" class="img-thumbnail" />
+            <br />
+            <span>@produtoCadastrado.Nome</span>
+            <br />
+            <span>
+                <b>Preço: </b> @produtoCadastrado.Preco.ToString("C2")
+            </span>
+        </div>
+    }
+
+</div>
+
+
+@*
+    #1
+    tag helper asp-route-id onde o id é o nome do parametro que sera passado para a IAction Index no controller Home. Lá tem que ser o mesmo nome
+*@   

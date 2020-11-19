@@ -56,7 +56,7 @@ namespace VendasWEB
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Produto}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
@@ -66,6 +66,7 @@ namespace VendasWEB
 
 /* #1
     vai criar um objs DAOs para cada cliente que acessa a app
+    Cria o servico de instanciar um obj ( pex: ProdutoDAO ) que está sendo chamado no ctor do ProdutoController pex
  */
 
 /* #2

@@ -346,3 +346,4 @@ C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWEB\obj\Debug\ne
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWEB\obj\Debug\netcoreapp3.1\VendasWEB.dll
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWEB\obj\Debug\netcoreapp3.1\VendasWEB.pdb
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWEB\obj\Debug\netcoreapp3.1\VendasWEB.genruntimeconfig.cache
+C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs

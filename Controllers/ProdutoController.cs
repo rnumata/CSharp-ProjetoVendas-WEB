@@ -102,16 +102,16 @@ namespace VendasWEB.Controllers
 
 /* #1
  *  Sempre que tiver return View() a app vai tentar encontrar na View no pacote com o nome do controller e um cshtml com o nome da Action. Neste caso Index
- */
-
-
-/* #2
-    Criar o ctor com o ProdutoDAO aonde tem a chamada ao context
     ViewBag: Obj dinamico que leva qq coisa (string, List, Obj) para a index. So pode ser usado antes de um return view
  */
 
+/* #2
+    Criar o ctor com o ProdutoDAO, CategoriaDAO ... aonde tem a chamada ao context 
+    O ctor para receber o objeto do ProdutoDAO e CategoriaDAO tem que declarar no Starup.cs a necessidade do serviço
+ */
+
 /* #3
-    obj global para receber o ProdutoDAO
+    obj global para receber o ProdutoDAO, CategoriaDAO
     readonly _produtoDAO so pode ser atribuido no ctor ou na mesma linha dele 
  */
 
