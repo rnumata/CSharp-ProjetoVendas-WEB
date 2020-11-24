@@ -20,7 +20,7 @@
 
     @foreach (Produto produtoCadastrado in Model)
     {
-        
+
         <div class="col-sm-3 div-conteudo">
             <img src="~/images/@produtoCadastrado.Imagem" alt="@produtoCadastrado.Descricao" style="width:100px;height:80px" class="img-thumbnail" />
             <br />
@@ -29,8 +29,13 @@
             <span>
                 <b>Preço: </b> @produtoCadastrado.Preco.ToString("C2")
             </span>
+
+            <br />
+            <a class="btn btn-primary" asp-action="AdicionarAoCarrinho" asp-controller="Home" asp-route-id="@produtoCadastrado.Id">Adicionar</a>
+
         </div>
     }
+
 
 </div>
 

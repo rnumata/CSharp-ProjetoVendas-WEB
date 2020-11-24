@@ -19,6 +19,8 @@ namespace VendasWEB.Models
 
         public DbSet<Categoria> Categorias { get; set; }
 
+        public DbSet<ItemVenda> ItensVenda { get; set; }
+
     }
 }
 
@@ -34,5 +36,5 @@ namespace VendasWEB.Models
 
 
 /* #2
-     
+     É aonde informamos ao EF que uma Classe vira uma tabela no BD
 */

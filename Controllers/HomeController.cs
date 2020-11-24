@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using VendasWEB.DAL;
+using VendasWEB.Models;
+using VendasWEB.Utils;
 
 namespace VendasWEB.Controllers
 {
@@ -11,11 +13,16 @@ namespace VendasWEB.Controllers
     {
         private readonly ProdutoDAO _produtoDAO;
         private readonly CategoriaDAO _categoriaDAO;
+        private readonly ItemVendaDAO _itemVendaDAO;
+        private readonly Secao _secao;
 
-        public HomeController(ProdutoDAO produtoDAO, CategoriaDAO categoriaDAO)
+
+        public HomeController(ProdutoDAO produtoDAO, CategoriaDAO categoriaDAO, ItemVendaDAO itemVendaDAO, Secao secao)
         {
             _produtoDAO = produtoDAO;
             _categoriaDAO = categoriaDAO;
+            _itemVendaDAO = itemVendaDAO;
+            _secao = secao;
         }
       
         public IActionResult Index(int id)
@@ -32,10 +39,26 @@ namespace VendasWEB.Controllers
         }
 
 
-        public IActionResult AdiconarAoCarrinho(int id)
+        public IActionResult AdicionarAoCarrinho(int id)
         {
-            return View();
+            Produto produto = _produtoDAO.BuscarPorId(id);
+            ItemVenda item = new ItemVenda
+            {
+                Produto = produto,
+                Preco = produto.Preco,
+                Quantidade = 1,
+                CarrinhoId = _secao.BuscarCarrinhoId()
+            };
+            _itemVendaDAO.Cadastrar(item);
+            return RedirectToAction("CarrinhoCompras");
         }
+
+
+        public IActionResult CarrinhoCompras()
+        {
+            return View(_itemVendaDAO.ListarPorCarrinhoId(_secao.BuscarCarrinhoId()));
+        }
+
     }
 }
 

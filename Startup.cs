@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VendasWEB.DAL;
 using VendasWEB.Models;
+using VendasWEB.Utils;
 
 namespace VendasWEB
 {
@@ -28,9 +29,16 @@ namespace VendasWEB
             // #1
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
+            services.AddScoped<ItemVendaDAO>();
+            // #3
+            services.AddHttpContextAccessor();
+            services.AddScoped<Secao>();
 
             // #2
             services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
+
+            // #3
+            services.AddSession();
 
             services.AddControllersWithViews();
         }
@@ -52,6 +60,9 @@ namespace VendasWEB
 
             app.UseAuthorization();
 
+            //#3
+            app.UseSession();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -67,6 +78,7 @@ namespace VendasWEB
 /* #1
     vai criar um objs DAOs para cada cliente que acessa a app
     Cria o servico de instanciar um obj ( pex: ProdutoDAO ) que está sendo chamado no ctor do ProdutoController pex
+    
  */
 
 /* #2
@@ -74,4 +86,11 @@ namespace VendasWEB
     <Context> é o nome da classe criada
     .UseSqlServer é para o MSSqlServer
     "Connection" é a string de conexão definida como Json lá no appsettings.json
+ */
+
+/* #3
+    Para trabalhar com a Session configurar 3 pontos
+    services.AddHttpContextAccessor(); cria um objeto injetado para trabalhar com a session
+    services.AddSession();
+    app.UseSession();
  */
