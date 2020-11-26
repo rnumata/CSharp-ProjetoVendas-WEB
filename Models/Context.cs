@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VendasWEB.Models
 {
-    public class Context : DbContext
+    public class Context : IdentityDbContext<Usuario>
     {
         // #1
         public Context(DbContextOptions options) : base(options)
@@ -20,6 +21,9 @@ namespace VendasWEB.Models
         public DbSet<Categoria> Categorias { get; set; }
 
         public DbSet<ItemVenda> ItensVenda { get; set; }
+
+        public DbSet<UsuarioView> Usuarios { get; set; }
+
 
     }
 }
