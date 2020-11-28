@@ -11,6 +11,7 @@ using VendasWEB.Models;
 
 namespace VendasWEB.Controllers
 {
+
     public class UsuarioController : Controller
     {
         private readonly Context _context;
@@ -55,7 +56,7 @@ namespace VendasWEB.Controllers
                     Email = usuarioView.Email
                 };
                 
-                var resultado = await _userManager.CreateAsync(usuario, usuarioView.Senha);
+                IdentityResult resultado = await _userManager.CreateAsync(usuario, usuarioView.Senha);
 
                 if (resultado.Succeeded)
                 {
@@ -86,7 +87,7 @@ namespace VendasWEB.Controllers
         {
             var result = await _signInManager.PasswordSignInAsync(usuarioView.Email, usuarioView.Senha, false, false);
 
-            string name = _signInManager.Context.User.Identity.Name;
+            var name = User.Identity.Name;
 
             if (result.Succeeded)
             {

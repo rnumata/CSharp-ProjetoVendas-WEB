@@ -27,28 +27,26 @@ namespace VendasWEB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // #1
+            //#1
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
             services.AddScoped<ItemVendaDAO>();
-            // #3
-            services.AddHttpContextAccessor();
             services.AddScoped<Secao>();
+            services.AddHttpContextAccessor();
 
-            // #2
+            //#2
             services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
 
             services.AddIdentity<Usuario, IdentityRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
 
-            services.ConfigureExternalCookie(options =>
+            services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Usuario/Login";
                 options.AccessDeniedPath = "/Usuario/AcessoNegado";
             });
 
-            // #3
+            //#3
             services.AddSession();
-
             services.AddControllersWithViews();
         }
 
@@ -67,9 +65,9 @@ namespace VendasWEB
 
             app.UseRouting();
 
-            app.UseAuthentication();
-
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             //#3
             app.UseSession();
