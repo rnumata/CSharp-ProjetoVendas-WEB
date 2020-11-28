@@ -11,14 +11,11 @@ using VendasWEB.Models;
 
 namespace VendasWEB.Controllers
 {
-
     public class UsuarioController : Controller
     {
         private readonly Context _context;
         private readonly UserManager<Usuario> _userManager;
         private readonly SignInManager<Usuario> _signInManager;
-
-
 
         public UsuarioController(Context context, UserManager<Usuario> userManager, SignInManager<Usuario> signInManager)
         {
@@ -34,7 +31,6 @@ namespace VendasWEB.Controllers
             return View(await _context.Usuarios.ToListAsync());
         }
 
-       
         // GET: Usuario/Create
         public IActionResult Create()
         {
@@ -46,16 +42,16 @@ namespace VendasWEB.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Email,Senha,Id,Criadoem, ConfirmacaoSenha")] UsuarioView usuarioView)
+        public async Task<IActionResult> Create([Bind("Email,Senha,Id,CriadoEm,ConfirmacaoSenha")] UsuarioView usuarioView)
         {
             if (ModelState.IsValid)
             {
                 Usuario usuario = new Usuario
                 {
-                    UserName = usuarioView.Email,    
+                    UserName = usuarioView.Email,
                     Email = usuarioView.Email
                 };
-                
+
                 IdentityResult resultado = await _userManager.CreateAsync(usuario, usuarioView.Senha);
 
                 if (resultado.Succeeded)
@@ -83,27 +79,26 @@ namespace VendasWEB.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([Bind("Email, Senha")]UsuarioView usuarioView)
+        public async Task<IActionResult> Login([Bind("Email, Senha")] UsuarioView usuarioView)
         {
             var result = await _signInManager.PasswordSignInAsync(usuarioView.Email, usuarioView.Senha, false, false);
 
-            var name = User.Identity.Name;
+            string name = User.Identity.Name;
 
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Produto");
             }
-
-            ModelState.AddModelError("", "Login ou senha inválidos");
+            ModelState.AddModelError("", "Login ou senha inválidos!");
             return View(usuarioView);
+
         }
 
-       
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-       
     }
+
 }

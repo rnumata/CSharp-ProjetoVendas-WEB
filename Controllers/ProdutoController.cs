@@ -13,7 +13,7 @@ using VendasWEB.Models;
 
 namespace VendasWEB.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ProdutoController : Controller
     {
         //#3

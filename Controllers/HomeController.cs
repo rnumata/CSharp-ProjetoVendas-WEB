@@ -54,10 +54,13 @@ namespace VendasWEB.Controllers
         }
 
 
-        public IActionResult CarrinhoCompras()
-        {
-            return View(_itemVendaDAO.ListarPorCarrinhoId(_secao.BuscarCarrinhoId()));
-        }
+        //public IActionResult CarrinhoCompras()
+        //{
+        //    ViewBag.Title = "Carrinho Compras";
+        //    string carrinhoId = _secao.BuscarCarrinhoId();
+        //    ViewBag.Total = _itemVendaDAO.SomarTotalCarrinho(carrinhoId);
+        //    return View(_itemVendaDAO.ListarPorCarrinhoId(carrinhoId);
+        //}
 
     }
 }

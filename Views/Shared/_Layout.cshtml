@@ -1,5 +1,5 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<Usuario> SignInManager
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<Usuario> SignInManager
+@inject Microsoft.AspNetCore.Identity.UserManager<Usuario> UserManager
 
 <!DOCTYPE html>
 
@@ -23,7 +23,8 @@
                     <li class="nav-item active">
                         <a class="nav-link" asp-action="Logout" asp-controller="Usuario">Logout</a>
                     </li>
-                } else
+                }
+                else
                 {
                     <li class="nav-item active">
                         <a class="nav-link" asp-action="Login" asp-controller="Usuario">Login</a>
