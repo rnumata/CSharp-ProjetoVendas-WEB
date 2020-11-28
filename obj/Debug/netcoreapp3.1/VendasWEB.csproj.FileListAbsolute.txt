@@ -358,3 +358,4 @@ C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\ne
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Details.cshtml.g.cs
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Edit.cshtml.g.cs
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
+C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Login.cshtml.g.cs

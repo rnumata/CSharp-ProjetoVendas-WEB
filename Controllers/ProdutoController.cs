@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using VendasWEB.Models;
 
 namespace VendasWEB.Controllers
 {
+    [Authorize]
     public class ProdutoController : Controller
     {
         //#3
@@ -29,6 +31,7 @@ namespace VendasWEB.Controllers
         }
 
         //#1
+        //[AllowAnonymous]
         public IActionResult Index()
         {       
             ViewBag.Title = "Gerenciamento de Produtos";  
