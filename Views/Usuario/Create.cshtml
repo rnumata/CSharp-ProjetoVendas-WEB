@@ -8,7 +8,30 @@
 
             <fieldset>
                 <legend>Endereço</legend>
+                <div class="form-group">
+                    <label asp-for="Cep" class="control-label">CEP</label>
+                    <input asp-for="Cep" id="cep" class="form-control" />
+                </div>
+
                 <button class="btn btn-primary" type="button" onclick="BuscarCep()">Buscar</button>
+
+                <div class="form-group">
+                    <label asp-for="Logradouro" class="control-label">Logradouro</label>
+                    <input asp-for="Logradouro" readonly id="logradouro" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Bairro" class="control-label">Bairro</label>
+                    <input asp-for="Bairro" readonly id="bairro" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Localidade" class="control-label">Localidade</label>
+                    <input asp-for="Localidade" readonly id="localidade" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Uf" class="control-label">UF</label>
+                    <input asp-for="Uf" readonly id="uf" class="form-control" />
+                </div>
+
             </fieldset>
 
             <fieldset>
@@ -40,13 +63,22 @@
 
 <script>
 
-    var url = "https://viacep.com.br/ws/01001000/json/";
+    var txtCep = document.getElementById("cep");
+    var txtLogradouro = document.getElementById("logradouro");
+    var txtBairro = document.getElementById("bairro");
+    var txtLocalidade = document.getElementById("localidade");
+    var txtUf = document.getElementById("uf");
 
-        function BuscarCep() {
+    function BuscarCep() {
+        var url = `https://viacep.com.br/ws/${txtCep.value}/json/ `;
+
             fetch(url)
                 .then(response => response.json())
                 .then(json => {
-                    alert(json.localidade)
+                    txtLogradouro.value = json.logradouro;
+                    txtBairro.value = json.bairro;
+                    txtLocalidade.value = json.localidade;
+                    txtUf.value = json.uf;
                 })
                 .catch(error => console.log(error));
         }
