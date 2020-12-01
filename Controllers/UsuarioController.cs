@@ -11,6 +11,7 @@ using VendasWEB.Models;
 
 namespace VendasWEB.Controllers
 {
+    [Authorize]
     public class UsuarioController : Controller
     {
         private readonly Context _context;

@@ -10,7 +10,7 @@ using VendasWEB.Models;
 
 namespace VendasWEB.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class CategoriaController : Controller
     {
         private readonly Context _context;

@@ -351,11 +351,14 @@ C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\bin\Debug\ne
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\VendasWEB.csproj.CoreCompileInputs.cache
-C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\VendasWEB.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Create.cshtml.g.cs
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Delete.cshtml.g.cs
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Details.cshtml.g.cs
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Edit.cshtml.g.cs
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
 C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Login.cshtml.g.cs
+C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\VendasWEB.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\VS\CSharp-ProjetoVendasWeb\VendasWeb\obj\Debug\netcoreapp3.1\VendasWEB.MvcApplicationPartsAssemblyInfo.cache
