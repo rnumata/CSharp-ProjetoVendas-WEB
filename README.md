@@ -1,6 +1,6 @@
 ### __Title__ 
 
-aplication for ASP.Net Core MVC technology
+application developed with ASP.Net Core MVC technology
 
 ### __Description__
 
