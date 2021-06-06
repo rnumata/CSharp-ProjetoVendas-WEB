@@ -16,3 +16,5 @@ DB Sql Server
 
 ### __Learnings__
 
+The development of an application with the technology ASP.Net Core applying the standard MVC</br>
+Configuration the dependencies of the provider for Entity Framework and the database MS SQL Server
